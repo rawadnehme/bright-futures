@@ -1,39 +1,40 @@
-**Welcome to your Base44 project** 
+# BrightFutures 🎒
 
-**About**
+A student-run charity website helping classmates at Bryant Middle School get the school supplies they need to succeed. Built with React, Vite, and Tailwind CSS.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## About
 
-This project contains everything you need to run your app locally.
+BrightFutures connects donors directly with students in need — no middlemen, no overhead. Every dollar goes straight to kids who show up to school without the basics: pencils, notebooks, or learning materials.
 
-**Edit the code in your local development environment**
+## Getting Started
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+**Prerequisites:** Node.js 18+
 
-**Prerequisites:** 
+```bash
+# Install dependencies
+npm install
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+# Start the dev server
+npm run dev
 ```
 
-Run the app: `npm run dev`
+The app will be available at **http://localhost:5173**.
 
-**Publish your changes**
+## Building for Production
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+```bash
+npm run build
+```
 
-**Docs & Support**
+Output goes to the `dist/` folder.
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## Deploying to GitHub Pages
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Pushing to `main` automatically deploys via the included GitHub Actions workflow (`.github/workflows/deploy.yml`).
+
+**One-time setup:**
+1. Push this repo to GitHub
+2. Go to **Settings → Pages** and set the source to **GitHub Actions**
+
+The site will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`.
+
