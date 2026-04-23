@@ -41,6 +41,20 @@ export function Footer() {
           <p>© {year} {org.name}. Made with heart for our community.</p>
           <p>All donations go directly to {org.school}, {org.location}.</p>
         </div>
+
+        <div className="flex items-center justify-center text-[11px] tracking-wide text-paper/35">
+          <span>
+            Designed and built by{' '}
+            <a
+              href="https://jjsites.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-paper/70 underline-offset-4 transition-colors hover:text-amber hover:underline"
+            >
+              jjsitedesign
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );
