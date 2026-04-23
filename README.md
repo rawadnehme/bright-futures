@@ -1,4 +1,4 @@
-# Bright Futures (https://brightfuturesnonprofit.com)
+# Bright Futures [(https://brightfuturesnonprofit.com)]
 
 A student-run charity website helping classmates at Bryant Middle School (Dearborn, MI) get the school supplies they need to succeed. 100% of donations go directly to students.
 
