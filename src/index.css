@@ -21,10 +21,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Overscroll color: defaults to hero (paper); JS swaps to ink near the footer. */
+    background-color: rgb(var(--paper));
+    transition: background-color 240ms ease;
   }
 
   body {
-    @apply bg-paper text-ink font-sans;
+    @apply text-ink font-sans;
+    background-color: transparent;
     font-feature-settings: 'ss01', 'cv11';
   }
 

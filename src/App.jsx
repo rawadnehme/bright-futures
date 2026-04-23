@@ -29,6 +29,31 @@ export default function App() {
     return () => document.removeEventListener('click', onClick);
   }, []);
 
+  // Swap <html> bg color between hero paper (top) and footer ink (bottom)
+  // so overscroll bounce matches the adjacent section.
+  useEffect(() => {
+    const root = document.documentElement;
+    const PAPER = '#FEFAF1';
+    const INK = '#0B1220';
+    let current = '';
+    const update = () => {
+      const max = root.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? window.scrollY / max : 0;
+      const next = ratio > 0.5 ? INK : PAPER;
+      if (next !== current) {
+        root.style.backgroundColor = next;
+        current = next;
+      }
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
   return (
     <>
       <ScrollProgress />
