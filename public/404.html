@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>BrightFutures</title>
-    <script>
-      // Single Page Apps for GitHub Pages
-      // Encode the path as a query string redirect so GitHub Pages serves index.html
-      var pathSegmentsToKeep = 1;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Not found · BrightFutures</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=Inter:wght@400;600&display=swap"
+    />
+    <style>
+      html,body{margin:0;padding:0;background:#FEFAF1;color:#0B1220;font-family:Inter,system-ui,sans-serif}
+      main{min-height:100vh;display:grid;place-items:center;padding:3rem;text-align:center}
+      h1{font-family:Fraunces,serif;font-size:clamp(3rem,10vw,6rem);margin:0 0 .5rem;font-weight:600;letter-spacing:-.02em}
+      p{margin:0 0 2rem;max-width:36ch;color:#1e293b}
+      a{display:inline-block;background:#0B1220;color:#FEFAF1;padding:.9rem 1.6rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s}
+      a:hover{transform:translateY(-2px)}
+      .accent{color:#F5A524;font-style:italic}
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div>
+        <h1>Off the <span class="accent">page</span>.</h1>
+        <p>That page doesn’t exist — but every kid deserves a page of their own.</p>
+        <a href="/bright-futures/">Back to BrightFutures</a>
+      </div>
+    </main>
+  </body>
 </html>

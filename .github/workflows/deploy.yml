@@ -11,11 +11,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,11 +31,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Lint
+        run: npm run lint
+
+      - name: Build (runs prebuild OG generation)
         run: npm run build
         env:
-          # This project is deployed under javvad.dev/bright-futures/
+          # Site is hosted at javvad.dev/bright-futures/
           VITE_BASE_PATH: /bright-futures/
+
+      - name: Copy 404 fallback for SPA-style routing
+        run: cp dist/index.html dist/404.html || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -42,6 +49,7 @@ jobs:
           path: dist
 
   deploy:
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     environment:

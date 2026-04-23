@@ -2,40 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrightFutures — Students Helping Students</title>
-    <meta name="description" content="BrightFutures is a student-run charity helping classmates at Bryant Middle School get the school supplies they need to succeed. 100% of donations go directly to students in need." />
-    <meta name="keywords" content="BrightFutures, student charity, school supplies, Bryant Middle School, donate, students helping students, education" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F5A524" />
+
+    <title>BrightFutures — Students helping students show up ready</title>
+    <meta
+      name="description"
+      content="BrightFutures is a student-run charity helping classmates at Bryant Middle School in Dearborn, Michigan get the school supplies they need to succeed. 100% of donations go directly to students."
+    />
+    <meta
+      name="keywords"
+      content="BrightFutures, student charity, school supplies, Bryant Middle School, Dearborn Michigan, donate, students helping students, education nonprofit"
+    />
     <meta name="author" content="BrightFutures" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://javvad.dev/bright-futures/" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0;1,9..144,400..700,0&family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="BrightFutures — Students Helping Students" />
-    <meta property="og:description" content="Students helping students get the school supplies they need. 100% of donations go directly to kids at Bryant Middle School." />
+    <meta property="og:site_name" content="BrightFutures" />
+    <meta property="og:title" content="BrightFutures — Students helping students show up ready" />
+    <meta
+      property="og:description"
+      content="Students helping students get the school supplies they need. 100% of donations go directly to kids at Bryant Middle School in Dearborn, Michigan."
+    />
     <meta property="og:url" content="https://javvad.dev/bright-futures/" />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="https://javvad.dev/bright-futures/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BrightFutures — Every kid shows up. We help them show up ready." />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BrightFutures — Students Helping Students" />
-    <meta name="twitter:description" content="Students helping students get the school supplies they need. 100% of donations go directly to kids at Bryant Middle School." />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:title" content="BrightFutures — Students helping students show up ready" />
+    <meta
+      name="twitter:description"
+      content="Students helping students get the school supplies they need. 100% of donations go directly to kids at Bryant Middle School."
+    />
+    <meta name="twitter:image" content="https://javvad.dev/bright-futures/og-image.png" />
+    <meta name="twitter:image:alt" content="BrightFutures — Every kid shows up. We help them show up ready." />
 
-    <!-- GitHub Pages SPA redirect handler -->
-    <script>
-      (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location));
+    <!-- JSON-LD: NGO + WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "NGO",
+            "@id": "https://javvad.dev/bright-futures/#org",
+            "name": "BrightFutures",
+            "url": "https://javvad.dev/bright-futures/",
+            "logo": "https://javvad.dev/bright-futures/favicon.svg",
+            "description": "A student-run charity helping classmates at Bryant Middle School in Dearborn, Michigan get the school supplies they need to succeed.",
+            "email": "brightfuturessupplies@gmail.com",
+            "location": {
+              "@type": "Place",
+              "name": "Bryant Middle School",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dearborn",
+                "addressRegion": "MI",
+                "addressCountry": "US"
+              }
+            },
+            "knowsAbout": ["Education", "School supplies", "Student welfare"],
+            "slogan": "Students helping students show up ready."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://javvad.dev/bright-futures/#website",
+            "url": "https://javvad.dev/bright-futures/",
+            "name": "BrightFutures",
+            "publisher": { "@id": "https://javvad.dev/bright-futures/#org" },
+            "inLanguage": "en-US"
+          }
+        ]
+      }
     </script>
   </head>
   <body>
