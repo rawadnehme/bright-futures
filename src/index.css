@@ -27,8 +27,7 @@
   }
 
   body {
-    @apply text-ink font-sans;
-    background-color: transparent;
+    @apply bg-paper text-ink font-sans;
     font-feature-settings: 'ss01', 'cv11';
   }
 
